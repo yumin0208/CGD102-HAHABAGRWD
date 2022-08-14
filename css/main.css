@@ -1,0 +1,328 @@
+:root{
+    --nav-color:#4369B4;
+    --bg1-color:#7190cd;
+    --bg2-color:#0057A7;
+    --text-color:#404040;
+    --main-color:#ffd54c;
+    --main2-color:#0945ba;
+    --main3-color:#ffe5fb;
+    --main4-color:#FFEF00;   
+}
+/* 背景漸層 */
+/* body{
+    width: 100%;
+    background-image: linear-gradient(to bottom, #fff5fe, #E1F6FF, #FFF2FD);   
+} */
+/* 共用設定 */
+/* ===============導覽列共用設定================= */
+/* header-----導覽列的藍色底 */
+    .menu{
+        width: 100%;
+        background-color: var(--nav-color);
+        height: 50px;
+        box-shadow: 0 0 15px 2px rgb(39, 50, 105);
+        position: fixed;
+        z-index: 10;
+    }
+/* header-----checkbox隱藏 */
+    #menu_hb{
+        display: none;}
+
+/* 更多商品按鈕 */
+.more{
+    text-align: center;
+}
+.more a{
+    display: inline-block;
+    padding: 10px 30px;
+    border-radius: 20px 20px 20px 20px;
+    border: 2px dashed var(--main2-color);
+    box-shadow: 0 0 0 3px var(--main4-color);
+    background-color: var(--main4-color);
+    color: var(--main2-color);
+    font-size: clamp(16px, calc((100vw - 414px) / 393.000 + 16px), 18px);
+}  
+/* ===============頁尾共用設定================= */
+footer{
+    width: 100%;
+    background-color:var(--nav-color);
+}
+.footer_content{
+    height: clamp(80px, calc((100vw - 414px) / 11.229 + 80px), 150px);
+    display: flex;
+    align-items: center;
+}
+.footer_picture .logo{
+    vertical-align: top;
+    text-align: center;
+}
+.footer_picture .logo img{
+    vertical-align: top;
+}
+/* ===============導覽列================= */
+/* 導覽列--平板直向以下 */
+    @media screen and (max-width: 1023px){
+        /* 平板橫向以下導覽列與會員登入icon隱藏 */
+        .menu_nav,.sign_in_icon{
+            display: none;
+        }
+        /* 手機版置中logo */
+        .logo_rwd{
+            width: 100%;
+        }
+        .logo_rwd a{
+            display: block;
+            width: 75px;
+            height: 75px;
+            position: relative;
+            margin: auto;
+            z-index: 10;
+        }
+        .logo_rwd img{
+            width:100%;
+            height: 100%;
+            vertical-align: top;
+            margin-top: 7px;
+        }
+        /* 漢堡選單 */
+        /* 漢堡按鈕 */
+        .menu_hb{
+            width: 40px;
+            height: 40px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            align-items: center;
+            position: relative;
+            top: -140%;
+            right:0;
+            left: 0;
+            margin-left: auto;
+            z-index: 3;
+        } 
+        /* 漢堡按鈕三條線    */
+        .menu_hb span{
+            width: 30px;
+            height: 2px;
+            background-color: var(--main-color);
+            position: absolute;
+            left: 0;
+            right: 0;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .menu_hb span:nth-child(1){
+            top: 9px;
+            transform: rotate(0deg);
+            transition: top .5s .5s,transform .5s 0s;
+        }
+        #menu_hb:checked ~ .menu .menu_hb span:nth-child(1){
+            top: 19px;
+            transition: .5s;
+            transform: rotate(45deg);
+            transition: top .5s .5s,transform .5s 1s;
+        }
+        .menu_hb span:nth-child(2){
+            top: 0;
+            bottom: 0;
+            margin: auto;
+            opacity: 1;
+            transition: .5s;
+        }
+        #menu_hb:checked ~ .menu .menu_hb span:nth-child(2){
+            opacity: 0;
+            transition: .5s;
+        }
+        .menu_hb span:nth-child(3){
+            bottom: 9px;
+            transform: rotate(0deg);
+            transition: bottom .5s .5s,transform .5s 0s;
+        }
+        
+        #menu_hb:checked ~ .menu .menu_hb span:nth-child(3){
+            bottom: 19px;
+            transform: rotate(-45deg);
+            transition: bottom .5s .5s,transform .5s 1s;
+        }
+        /* 漢堡下方選單 */
+        .menu_hb_link{
+            display: none;
+            position: absolute;
+            z-index: 0;
+            top: 50px;
+            width: 100%;
+            background-color:#fff1fd;
+            /* filter: opacity(95%); */
+            text-align: center;
+            
+        }
+        .menu_hb_link li{
+            border-bottom: 1px solid var(--bg2-color);
+        }
+        .menu_hb_link li:nth-child(1){
+            width: 100%;
+            height: 36px;
+            background-color: #fff1fd;
+            border-bottom: none;
+        }
+        .menu_hb_link a{
+            text-decoration: none;
+            font-size: 16px;
+            color: var(--main2-color);
+            display: inline-block;
+            padding: 20px;
+        }
+        #menu_hb:checked ~ .menu .menu_hb_link{
+            display: block;
+        }  
+    }
+    
+/* 導覽列----平板橫向以上 */
+    @media screen and (min-width: 1024px){
+        /* 手機版logo隱藏 */
+        .logo_rwd, .menu_hb_link{
+            display: none;
+        }
+
+        .menu_nav{
+            display: flex;
+            justify-content: center;
+        }
+        .menu_nav ul{
+            display: flex;
+            margin: auto;
+        }
+        .menu_nav ul li a{
+            display: block;
+            padding: 7px 20px ;
+            text-decoration: none;
+            text-shadow: 1px 1px 1px gray;
+            font-size: 16px;
+            line-height: 36px;
+            color: #fff;
+        }
+        .menu_nav ul li a:hover{
+            color: var(--main-color);
+        }
+        .logo{
+            width: 80px;
+        }
+        .logo img{
+            width: 100%;
+            vertical-align: top;
+        }
+        .sign_in_icon{
+            display: block;
+            margin: 0 20px;
+            position: absolute;
+            top: 0;
+            right: 0;
+        }
+        .material-symbols-rounded{
+            color: #fff;
+            vertical-align: top;
+            margin: 13px 0;
+        } 
+    }
+/* ===============頁尾================= */
+/* 頁尾--手機版 */
+@media screen and (max-width: 767px){
+    .footer_picture{
+        display: flex;
+        width: 100%;        
+    }
+    .footer_picture .logo img{
+        width: 33%;
+    }
+    .community h5 {
+        font-size: 14px;
+        color: #ffffff;
+        font-weight: 600; 
+        text-align: center;
+        margin-bottom: 5px;
+    }
+    .community_icon {
+        text-align: center;
+    } 
+    .community_icon img{
+        vertical-align: top;
+        width: 20%;
+    } 
+    .footer_text ul {
+        display: none;
+    }
+    .footer_txt{
+        display: flex;
+    }
+    .footer_txt li a{
+        display: inline-block;
+        color: #fff;
+        font-size: 13px;
+        padding: 5px;
+        letter-spacing: 3px;
+        line-height: 20px;
+    }
+}
+/* 頁尾--平板直向 */
+@media screen and (min-width: 768px){
+    .footer_content{
+        justify-content: center;
+        
+    }
+    .footer_picture{
+        display: flex;
+        /* width: 300px; */
+        justify-content: space-between;
+    }
+    .footer_picture .logo img{
+        width: 60%;
+    } 
+    /* 標題與社群icon---------------- */
+    .community {
+        margin: auto;
+    }
+    .community h5 {
+        font-size: 16px;
+        color: #ffffff;
+        font-weight: 600; 
+        text-align: center;
+        margin-bottom: 10px;
+    }
+    .community_icon {
+        text-align: center;
+    } 
+    .community_icon img{
+        vertical-align: top;
+        padding:5px;
+    } 
+    /* 次要選單----------------- */
+    .footer_text {
+        display: flex;
+    }
+
+    .footer_text ul {
+        padding: 0 5px;
+    }
+    .footer_text ul li{
+        padding: 3px 15px;
+    }
+    .footer_text ul li h5{
+        font-size: 15px;
+        color: #ffffff;
+        font-weight: 600; 
+    }
+    .footer_text ul li a{
+        font-size: 13px; 
+        color: #ffffff;
+        text-decoration: none;
+    } 
+    .footer_txt{
+        display: none;
+    }
+}
+/* 頁尾---平板橫向1024以上 */
+@media screen and (min-width: 1024px){
+    .footer_picture .logo img{
+        width: 95%;
+    } 
+}

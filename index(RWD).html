@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HAHABAG</title>
+    <link rel="shortcut icon" href="./image/logo.svg">
+    <link rel="bookmark" href="./image/logo.svg">
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <link rel="stylesheet" href="./css/owl/owl.carousel.css">
+    <link rel="stylesheet" href="./css/owl/owl.theme.default.css">
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/index.css">
+    <script src="./javascript/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+</head>
+
+<body>
+    <input type="checkbox" name="" id="menu_hb">
+    <header class="menu">
+        <h1>
+            <span class="sr-only">HA HA BAG</span>
+        </h1>
+        <!-- 桌機版導覽列+logo -->
+        <nav class="menu_nav">
+            <ul>
+                <li><a href="newItem.html">最新商品</a></li>
+                <li><a href="coinPurse.html">口金零錢包</a></li>
+                <li><a href="coinPurse.html">口金皮夾</a></li>
+                <li ><a href="index(RWD).html" class="logo"><img src="./image/logo1.svg" alt="logo"></a></li>
+                <li><a href="coinPurse.html">口金斜背包</a></li>
+                <li ><a href="#">客製包包</a></li>
+                <li><a href="#">品牌介紹</a></li>
+            </ul>
+        </nav>
+        <!-- 會員登入+購物車iocn -->
+        <div class="sign_in_icon">
+            <a href="#"><span class="material-symbols-rounded">
+                shopping_cart</span></a>
+                
+            <a href="#"><span class="material-symbols-rounded">
+                account_circle</span></a>   
+        </div>
+        <!-- 手機版logo -->
+        <div class="logo_rwd">
+            <a href="index.html" class=""><img src="./image/logo1.svg" alt="logo"></a>
+        </div>
+        <!-- 漢堡選單 -->
+        <label for="menu_hb" class="menu_hb">
+            <span></span>
+            <span></span>
+            <span></span>
+        </label>
+        <!-- 漢堡選單連結 -->
+        <ul class="menu_hb_link">
+            <li></li>
+            <li><a href="newItem.html">最新商品</a></li>
+            <li><a href="coinPurse.css">口金零錢包</a></li>
+            <li><a href="coinPurse.css">口金皮夾</a></li>
+            <li><a href="coinPurse.css">口金斜背包</a></li>
+            <li><a href="#">客製包包</a></li>
+            <li><a href="#">品牌介紹</a></li>
+            <li><a href="#">會員登入</a></li>
+            <li><a href="#">購物車</a></li>
+        </ul>
+    </header>
+    <!-- ===============banner圖============== -->
+
+    <section class="wrap_banner">
+        <!-- 手機板的首圖輪播 -->
+        <div class="banner_slider small" id="small_carousel">
+            <div class="banner_picture_items small fade in-active">
+                <img src="./image/14.rwd.jpg" alt="首頁圖片">
+            </div>
+            <div class="banner_picture_items small fade in-active">
+                <img src="./image/13rwd.jpg" alt="首頁圖片">
+            </div>
+            <div class="banner_picture_items small fade in-active">
+                <img src="./image/12.rwd.jpg" alt="首頁圖片">
+            </div>
+            <a class="pre" onclick="plusSlides(-1)"><</a>
+            <a class="next" onclick="plusSlides(1)">></a>
+            <div class="banner_slider_dot">
+                <span class="dot" onclick="currentSlide(1)"></span>
+                <span class="dot" onclick="currentSlide(2)"></span>
+                <span class="dot" onclick="currentSlide(3)"></span>
+            </div>
+        </div>
+        <!-- 桌機版首圖輪播 -->
+        <div class="banner_slider large" id="large_carousel">
+            <div class="banner_picture_items large fade">
+                <img src="./image/14.jpg" alt="首頁圖片">
+            </div>
+            <div class="banner_picture_items large fade">
+                <img src="./image/13.jpg" alt="首頁圖片">
+            </div>
+            <div class="banner_picture_items large fade">
+                <img src="./image/12.jpg" alt="首頁圖片">
+            </div>
+            <a class="pre" onclick="plusSlides(-1)"><</a>
+            <a class="next" onclick="plusSlides(1)">></a>
+            <div class="banner_slider_dot">
+                <span class="dot" onclick="currentSlide(1)"></span>
+                <span class="dot" onclick="currentSlide(2)"></span>
+                <span class="dot" onclick="currentSlide(3)"></span>
+            </div>
+        </div>  
+    </section>
+    
+    <!-- ===========最新商品(輪播)============ -->
+    <section class="wrap_new_product">
+        <div class="new_product_group">
+            <h2 class="new_paper_tape">最新商品</h2>
+            <p>抓住夏天的尾巴！<br>
+            在過完了溫馨又溫柔的五月天之後<br>
+            準備好迎接台灣獨特的熱情初夏...</p>
+            <div class="new_product_list owl-carousel owl-theme">
+                <div class="new_product_items">
+                    <div class="new_product_items_picture">
+                        <a href="newItem.html"><img src="./image/bag1.jpg" alt="口金包"> </a>
+                    </div>
+                    <div class="new_product_items_text">
+                        <h3>小獅子零錢包</h3>
+                        <p>材質:100% 棉</p>
+                        <p>尺寸:長 14 x 寬 20 cm</p>
+                        <p>功能:收納硬幣</p>
+                        <p class="price"><a href="">NT$1,180</a></p>
+                    </div>
+                </div>
+                <div class="new_product_items">
+                    <div class="new_product_items_picture">
+                        <a href=""><img src="./image/bag2.jpg" alt="口金包"></a>
+                    </div>
+                    <div class="new_product_items_text">
+                        <h3>熊貓零錢包</h3>
+                        <p>材質:100% 棉</p>
+                        <p>尺寸:長 14 x 寬 20 cm</p>
+                        <p>功能:收納硬幣</p>
+                        <p class="price"><a href="">NT$1,290</a></p>
+                    </div>
+                </div>
+                <div class="new_product_items">
+                    <div class="new_product_items_picture">
+                        <a href="newItem.html"><img src="./image/bag3.jpg" alt="口金包"></a>
+                    </div>
+                    <div class="new_product_items_text">
+                        <h3>塗鴉系列零錢包</h3>
+                        <p>材質:100% 棉</p>
+                        <p>尺寸:長 14 x 寬 20 cm</p>
+                        <p>功能:收納硬幣</p>
+                        <p class="price"><a href="">NT$1,090</a></p>
+                    </div>
+                </div> 
+                <div class="new_product_items">
+                    <div class="new_product_items_picture">
+                        <a href=""><img src="./image/bag4.jpg" alt="口金包"></a>
+                    </div>
+                    <div class="new_product_items_text">
+                        <h3>繽紛系列零錢包</h3>
+                        <p>材質:100% 棉</p>
+                        <p>尺寸:長 14 x 寬 20 cm</p>
+                        <p>功能:收納硬幣</p>
+                        <p class="price"><a href="">NT$1,490</a></p>
+                    </div>
+                </div>
+                <div class="new_product_items">
+                    <div class="new_product_items_picture">
+                        <a href="newItem.html"><img src="./image/bag5 (2).jpg" alt="口金包"></a>
+                    </div>
+                    <div class="new_product_items_text">
+                        <h3>櫻花零錢包</h3>
+                        <p>材質:100% 棉</p>
+                        <p>尺寸:長 14 x 寬 20 cm</p>
+                        <p>功能:收納硬幣</p>
+                        <p class="price"><a href="">NT$1,890</a></p>
+                    </div>
+                </div>
+                <div class="new_product_items">
+                    <div class="new_product_items_picture">
+                        <a href="newItem.html"><img src="./image/bag5 (3).jpg" alt="口金包"></a>
+                    </div>
+                    <div class="new_product_items_text">
+                        <h3>繽紛數字零錢包</h3>
+                        <p>材質:100% 棉</p>
+                        <p>尺寸:長 14 x 寬 20 cm</p>
+                        <p>功能:收納硬幣</p>
+                        <p class="price"><a href="">NT$1,590</a></p>
+                    </div>
+                </div>
+            </div>
+            <div class="more">
+                <a href="newItems.html">更多商品</a>
+            </div>  
+        </div>
+    </section> 
+
+     <!-- ==============商品介紹============== -->
+    <section class="wrap_product_introduction">
+        <div class="product_introduction_ellipse">
+            <h2 class="product_introduction_title">商品介紹</h2>
+        </div>                
+        <div class="product_introduction_group">
+            <div class="product_title">
+                <p>目前的設計包括了零錢包、皮夾、斜背包等，皆是使用日本製布料，發揮創意重新設計製作的作品。一針一線的手縫口金更牢固也更有溫度，堅持使用日本進口並賦予每塊布料獨特的名字與故事從剪裁到打版不斷改良設計出我們自己也滿意的包款我們不像機器那樣的冰冷我們有情緒﹑有溫度每個手作的痕跡，都是情感的證明。</p>
+            </div>
+                <div class="product_items">
+                    <!-- 零錢包-------- -->
+                    <div class="product_items_coin">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <div class="sub_coin">零錢包</div>
+                        <div class="product_picture">
+                            <a href="coinPurse.html"><img src="./image/bag5.jpg" alt="零錢包圖"></a>
+                        </div>
+                        <div class="product_text_coin">
+                            <h4>夏日碎花口金包</h4>
+                            <p>尺寸:長 14 x 寬 20 cm</p>
+                            <p>材質:100% 棉</p>
+                            <p>顏色:藍色</p>
+                            <div class="price">
+                                <a href="coinPurse.html"><img src="./image/Buy.svg" alt="購物車"></a>
+                                <p><a href="coinPurse.html">NT$980</a></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product_items_coin">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <div class="sub_coin">零錢包</div>
+                        <div class="product_picture">
+                            <a href="coinPurse.html"><img src="./image/bag6.jpg" alt="零錢包圖"></a>
+                        </div>
+                        <div class="product_text_coin">
+                            <h4>和風慶典口金包</h4>
+                            <p>尺寸:長 14 x 寬 20 cm</p>
+                            <p>材質:100% 棉</p>
+                            <p>顏色:綠色</p>
+                            <div class="price">
+                                <a href="coinPurse.html"><img src="./image/Buy.svg" alt="購物車"></a>
+                                <p><a href="coinPurse.html">NT$890</a></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product_items_coin">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <div class="sub_coin">零錢包</div>
+                        <div class="product_picture"><a href="coinPurse.html"><img src="./image/bag7.jpg" alt="零錢包圖"></a></div>
+                        <div class="product_text_coin">
+                            <h4>小雪人口金包</h4>
+                            <p>尺寸:長 14 x 寬 20 cm</p>
+                            <p>材質:100% 棉</p>
+                            <p>顏色:深藍色</p>
+                            <div class="price">
+                                <a href="coinPurse.html"><img src="./image/Buy.svg" alt="購物車"></a>
+                                <p><a href="coinPurse.html">NT$1080</a></p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 皮夾----------- -->
+                    <div class="product_items_wallet">
+                        <div class="sub_wallet">皮夾</div>
+                        <div class="product_picture">
+                            <a href="coinPurse.html"><img src="./image/bag8.jpg" alt="皮夾圖"></a>
+                        </div>
+                        <div class="product_text_wallet">
+                            <h4>點點口金包</h4>
+                            <p>尺寸:長 14 x 寬 20 cm</p>
+                            <p>材質:100% 棉</p>
+                            <p>顏色:黑色白點</p>
+                            <div class="price">
+                                <a href="coinPurse.html"><img src="./image/Buy2.svg" alt="購物車"></a>
+                                <a href="coinPurse.html"><span>NT$1,070</span></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product_items_wallet">
+                        <div class="sub_wallet">皮夾</div>
+                        <div class="product_picture">
+                            <a href="#"><img src="./image/bag9.jpg" alt="皮夾圖"></a>
+                        </div>
+                        <div class="product_text_wallet">
+                            <h4>焦糖口金包</h4>
+                            <p>尺寸:長 14 x 寬 20 cm</p>
+                            <p>材質:100% 棉</p>
+                            <p>顏色:咖啡色</p>
+                            <div class="price">
+                                <a href="#"><img src="./image/Buy2.svg" alt="購物車"></a>
+                                <a href="#"><span>NT$1,300</span></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product_items_wallet">
+                        <div class="sub_wallet">皮夾</div>
+                        <div class="product_picture">
+                            <a href="coinPurse.html"><img src="./image/bag10.jpg" alt="皮夾圖"></a>
+                        </div>
+                        <div class="product_text_wallet">
+                            <h4>花樣口金包</h4>
+                            <p>尺寸:長 14 x 寬 20 cm</p>
+                            <p>材質:100% 棉</p>
+                            <p>顏色:淺綠色</p>
+                            <div class="price">
+                                <a href="coinPurse.html"><img src="./image/Buy2.svg" alt="購物車"></a>
+                                <a href="coinPurse.html"><span>NT$1,500</span></a>
+                            </div>
+                        </div>
+                    </div>
+                     <!-- 斜背包------ -->
+                    <div class="product_items_bag">
+                        <div class="sub_bag">斜背包</div>
+                        <div class="product_picture">
+                            <a href="coinPurse.html"><img src="./image/bag11.jpg" alt="斜背包"></a>
+                        </div>
+                        <div class="product_text_bag">
+                            <h4>條紋斜背包</h4>
+                            <p>尺寸:長 35 x 寬 20 cm</p>
+                            <p>材質:100% 棉</p>
+                            <p>顏色:藍色</p>
+                            <div class="price">
+                                <a href="coinPurse.html"><img src="./image/Buy3.svg" alt="購物車"></a>
+                                <a href="coinPurse.html"><span>NT$3,700</span></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product_items_bag">
+                        <div class="sub_bag">斜背包</div>
+                        <div class="product_picture"><a href="coinPurse.html"><img src="./image/bag12.jpg" alt="斜背包"></a></div>
+                        <div class="product_text_bag">
+                            <h4>森林系斜背包</h4>
+                            <p>尺寸:長 14 x 寬 30 cm</p>
+                            <p>材質:皮革</p>
+                            <p>顏色:綠色</p>
+                            <div class="price">
+                                <a href=""><img src="./image/Buy3.svg" alt="購物車"></a>
+                                <a href=""><span>NT$2,500</span></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product_items_bag">
+                        <div class="sub_bag">斜背包</div>
+                        <div class="product_picture"><a href="coinPurse.html"><img src="./image/bag13.jpg" alt="斜背包"></a></div>
+                        <div class="product_text_bag">
+                            <h4>湛藍斜背包</h4>
+                            <p>尺寸:長 14 x 寬 25 cm</p>
+                            <p>材質:100% 棉</p>
+                            <p>顏色:藍色</p>
+                            <div class="price">
+                                <a href="coinPurse.html"><img src="./image/Buy3.svg" alt="購物車"></a>
+                                <a href="coinPurse.html"><span>NT$2,600</span></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            <div class="more">
+                <a href="coinPurse.html">更多商品</a>
+            </div> 
+            </div>    
+        </div>
+        </div>
+    </section>
+
+     <!-- ============客製商品============== --> 
+    <section class="wrap_custom_made">
+        <div class="custom_made_group">
+            <div class="custom_made_bag">
+                <h2 class="custom_paper_tape">客製包包</h2>
+                <div class="custom_items ">
+                    <div class="custom_made_text">
+                        <h3>讓我們幫您做出心目中的口金包</h3>
+                        <p>可以自由選取不同的版型、布料、口金尺寸，甚至可以加上刺繡的圖樣，打造出個人專屬包款。</p>
+                        <p>支付客製包款的訂金後，師傅便會著手製作屬於您的客製包包，製作時間約30至45個工作天，實際製作時間以當時接單情況為準，若提前完成就會提前寄出喔。</p>                
+                    </div>
+                    <div class="custom_made_picture"><img src="./image/bag15.jpg" alt="客製包包"></div>
+                    <div class="more">
+                        <a href="custom.html">開始訂製</a>
+                    </div>      
+                </div>
+            </div>
+        </div>
+    </section> 
+
+    <!-- =========品牌介紹&店鋪位置============ -->
+    <section class="wrap_brand">
+        <div class="brand_group">
+            <div class="brand">
+                <div class="brand_picture">
+                    <a href="#"><img src="./image/bag16.jpg" alt="品牌照片"></a>
+                </div>
+                <div class="brand_title">
+                    <h2>品牌介紹</h2>
+                </div>
+            </div>
+            <div class="shop">
+                <div class="shop_picture">
+                    <a href="#"><img src="./image/bag17.jpg" alt="店鋪照片"></a>
+                </div>
+                <div class="shop_title">
+                    <h2>店舖位置</h2>
+                </div>
+            </div>
+        </div>
+    </section> 
+    <!-- 頁尾============= -->
+    <footer>
+        <div class="footer_content">
+            <!-- ------logo跟品牌社群-------------- -->
+        <div class="footer_picture">
+            <div class="logo">
+                <a href="#"><img src="./image/logo.svg" alt="logo"></a>
+            </div>
+            <div class="community">
+                <h5>HA HA BAG</h5>
+                <div class="community_icon">
+                    <a href="#"><img src="./image/Twitter.svg" alt="twitter"></a>
+                    <a href="#"><img src="./image/Facebook.svg" alt="facebook"></a>
+                    <a href="#"><img src="./image/Instagram.svg" alt="instagram"></a>
+                </div>
+            </div>
+        </div>
+
+        <!-- ------------次要選單-------------- -->
+        <div class="footer_text">
+            <ul class="about">
+                <li><h5>關於我們</h5></li>
+                <li><a href="#">商店簡介</a></li>
+                <li><a href="#">聯絡我們</a></li>
+                <li><a href="#">隱私權及網站使用條款</a></li>
+            </ul>    
+
+            <ul class="shopping">
+                <li><h5>購物</h5></li>
+                <li><a href="#">如何購買</a></li>
+                <li><a href="#">配送服務</a></li>
+                <li><a href="ˇ">付款方式</a></li>
+            </ul>    
+
+            <ul class="member">
+                <li><h5>會員</h5></li>
+                <li><a href="#">我的帳戶</a></li>
+                <li><a href="#">會員制度</a></li>
+                <li><a href="#">贈品兌換</a></li>
+            </ul>
+
+            <ul class="help">
+                <li><h5>幫助</h5></li>
+                <li><a href="">常見問答</a></li>
+                <li><a href="">售後服務</a></li>
+                <li><a href="">包裹查詢</a></li>
+            </ul>
+        </div>
+        <ul class="footer_txt">
+            <li><a href="#">關於我們</a></li>
+            <li><a href="#">購物說明</a></li>
+            <li><a href="#">會員中心</a></li>
+            <li><a href="#">售後服務</a></li>
+        </ul>
+        </div>
+        
+    </footer>
+    
+<script type="text/javascript" src="./javascript/vanilla-tilt.js"></script>
+</body>
+
+
+
+<script src="./javascript/index.js"></script>
+
+</html>
