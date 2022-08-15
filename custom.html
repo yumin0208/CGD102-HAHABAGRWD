@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="./css/custom.css">
     <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <script src="./javascript/jquery-3.6.0.min.js"></script>
 </head>
 <body>
     <input type="checkbox" name="" id="menu_hb">
@@ -62,7 +63,8 @@
     <section class="wrap_custom">
         <h2 class="custom_paper_tape">客製包包</h2>
         <div class="custom_group">
-            <div class="custom_picture"><img src="./image/bag15.jpg" alt="客製圖片">
+            <div class="custom_picture">
+                <img class="large" src="./image/custom/coin1.jpg" alt="客製圖片">
             </div>
             <div class="custom_selection">
                 <div class="selection_txt">
@@ -76,47 +78,42 @@
                         <h4>請先選擇製作的版型</h4>
                         <div class="layout_dashed"></div>
                     </div>
-                    <div class="layout_link_small">
-                        <img data-item="1" src="./image/custom/6075386.png" alt="版型A">
-                        <img data-item="2" src="./image/custom/6075386.png" alt="版型B">
-                        <img data-item="3" src="./image/custom/6075386.png" alt="版型C">
-                    </div>
-                    <div class="layout_link_large">
-                        <img data-item="1" src="./image/custom/20210806191226245027.jpg" alt="版型A">
-                        <img data-item="2" src="./image/custom/2681936168002^01.jpg" alt="版型B">
-                        <img data-item="3" src="./image/custom/bag15.jpg" alt="版型C">
-                    </div>
+                    <ul class="layout_link">
+                        <li><img class="imageSmall" src="./image/custom/coin1.jpg" alt="版型A">版型A</li>
+                        <li><img class="imageSmall" src="./image/custom/coin2.jpg" alt="版型B">版型B</li>
+                        <li><img class="imageSmall" src="./image/custom/coin3.jpg" alt="版型C">版型C</li>
+                    </ul>
                     <p>尺寸規格說明 :
-                        <br>版型A: 寬8cmX高6.5cm（含口金）厚度1.5cm
-                        <br>版型B: 寬9cm×高8.5cm（含口金約10cm）
-                        <br>版型C: 寬(最大幅) 10cm（口金横幅）8cm
-                        縦6.5cm（含口金約8.5cm）
+                        <br>版型A: 寬15cmX高8.5cm（含口金）厚度3cm
+                        <br>版型B: 寬9cm×高8.5cm（含口金約9.5cm）
+                        <br>版型C: 寬(最大幅) 18cm（口金横幅）8cm
+                        （含口金約8.5cm）
                         厚度3cm</p>
                 </div>
-                <!-- <div class="selection_metal">
+                <div class="selection_metal">
                     <div class="metal_title">
                         <div class="metal_dashed"></div>
                         <h4>請先選擇口金配件的顏色</h4>
                         <div class="metal_dashed"></div>
                     </div>
-                    <div class="metal_link">
-                        <div class="color yellow"><a href="#"></a></div>
-                        <div class="color gray"><a href="#"></a></div>
-                    </div>
-                </div> -->
-                <!-- <div class="selection_fabric">
+                    <ul class="metal_link">
+                        <li><img class="image" src="./image/custom/coin4.jpg" alt="口金顏色"></li>
+                        <li><img src="./image/custom/coin5.jpg" alt="口金顏色"></li>
+                    </ul>
+                </div>
+                <div class="selection_fabric">
                     <div class="fabric_title">
                         <div class="fabric_dashed"></div>
                         <h4>請先選擇外觀布料的顏色</h4>
                         <div class="fabric_dashed"></div>
                     </div>
-                    <div class="fabric_link">
-                        <a href="#"><img src="./image/custom/color1.jpg" alt="">山吹</a>
-                        <a href="#"><img src="./image/custom/color2.jpg" alt="">縹</a>
-                        <a href="#"><img src="./image/custom/color3.jpg" alt="">黑</a>
-                        <a href="#"><img src="./image/custom/color4.jpg" alt="">綠</a>
-                        <a href="#"><img src="./image/custom/color5.jpg" alt="">櫻桃</a>
-                    </div>
+                    <ul class="fabric_link">
+                        <li><img class="image" src="./image/custom/color5.jpg" alt="布料顏色">櫻桃</li>
+                        <li><img src="./image/custom/color1.jpg" alt="布料顏色">山吹</li>
+                        <li><img src="./image/custom/color2.jpg" alt="布料顏色">縹</li>
+                        <li><img src="./image/custom/color3.jpg" alt="布料顏色">黑</li>
+                        <li><img src="./image/custom/color4.jpg" alt="布料顏色">綠</li>
+                    </ul>
                 </div>
                 <div class="selection_inner">
                     <div class="inner_title">
@@ -124,49 +121,37 @@
                         <h4>請先選擇內裡布料的顏色</h4>
                         <div class="inner_dashed"></div>
                     </div>
-                    <div class="inner_link">
-                        <a href="#"><img src="./image/custom/color1.jpg" alt="">山吹</a>
-                        <a href="#"><img src="./image/custom/color2.jpg" alt="">縹</a>
-                        <a href="#"><img src="./image/custom/color3.jpg" alt="">黑</a>
-                        <a href="#"><img src="./image/custom/color4.jpg" alt="">綠</a>
-                        <a href="#"><img src="./image/custom/color5.jpg" alt="#">櫻桃</a>
-                    </div>
-                </div> -->
-                <!-- <div class="selection_printing">
+                    <ul class="inner_link">
+                        <li><img src="./image/custom/color5.jpg" alt="#">櫻桃</li>
+                        <li><img src="./image/custom/color1.jpg" alt="">山吹</li>
+                        <li><img src="./image/custom/color2.jpg" alt="">縹</li>
+                        <li><img src="./image/custom/color3.jpg" alt="">黑</li>
+                        <li><img src="./image/custom/color4.jpg" alt="">綠</li>
+                    </ul>
+                </div>
+                <div class="selection_printing">
                     <div class="printing_title">
                         <div class="printing_dashed"></div>
                         <h4>請先選擇刺繡的圖案</h4>
                         <div class="printing_dashed"></div>
-                    </div> -->
-                    <!-- <div class="printing_link">
-                        <a href="#"><img src="./image/custom/pattern1.jpg" alt="">羊</a>
-                        <a href="#"><img src="./image/custom/pattern2.jpg" alt="">花卉</a>
-                        <a href="#"><img src="./image/custom/pattern3.jpg" alt="">狗</a>
-                        <a href="#"><img src="./image/custom/pattern4.jpg" alt="">海龜</a>
-                        <a href="#"><img src="./image/custom/pattern5.jpg" alt="">水果</a>
-                        <a href="#"><img src="./image/custom/pattern1.jpg" alt="">羊</a>
-                        <a href="#"><img src="./image/custom/pattern2.jpg" alt="">花卉</a>
-                        <a href="#"><img src="./image/custom/pattern3.jpg" alt="">狗</a>
-                        <a href="#"><img src="./image/custom/pattern4.jpg" alt="">海龜</a>
-                        <a href="#"><img src="./image/custom/pattern5.jpg" alt="">水果</a>
-                        <a href="#"><img src="./image/custom/pattern1.jpg" alt="">羊</a>
-                        <a href="#"><img src="./image/custom/pattern2.jpg" alt="">花卉</a>
-                        <a href="#"><img src="./image/custom/pattern3.jpg" alt="">狗</a>
-                        <a href="#"><img src="./image/custom/pattern4.jpg" alt="">海龜</a>
-                        <a href="#"><img src="./image/custom/pattern5.jpg" alt="">水果</a>
                     </div>
-                </div> -->
+                    <ul class="printing_link">
+                        <li><img class="image" src="./image/custom/pattern2.jpg" alt="花卉">花卉</li>
+                        <li><img src="./image/custom/pattern1.jpg" alt="羊">羊</li>
+                        <li><img src="./image/custom/pattern3.jpg" alt="狗">狗</li>
+                        <li><img src="./image/custom/pattern4.jpg" alt="海龜">海龜</li>
+                        <li><img src="./image/custom/pattern5.jpg" alt="水果">水果</li>
+                    </ul>
+                </div>
             </div>
         </div>
         <div class="next_page">
             <a href="#">下一步</a>
         </div>
     </section>
-
-
     <footer>
         <div class="footer_content">
-            <!_- ------logo跟品牌社群-------------- -->
+            <!-- - ------logo跟品牌社群-------------- --> 
         <div class="footer_picture">
             <div class="logo">
                 <a href="#"><img src="./image/logo.svg" alt="logo"></a>
@@ -218,7 +203,6 @@
         </ul>
         </div>
     </footer>
-
-
 </body>
+<script src="./javascript/custom.js"></script>
 </html>

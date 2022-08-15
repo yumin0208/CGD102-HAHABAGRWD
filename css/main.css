@@ -11,8 +11,8 @@
 
 /* 共用設定 */
 /* ===============導覽列共用設定================= */
-.under_line{
-    border-bottom:3px solid var(--main-color) ;
+.menu_nav .under_line{
+    color:#ffd54c;
 }
 /* header-----導覽列的藍色底 */
     .menu{

@@ -22,10 +22,6 @@
 /* 圖片與文字的群組--------- */
 .custom_group{
     max-width: 1200px;
-    width: 80%;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
     margin: auto;
 }
 /* 圖片------------ */
@@ -45,18 +41,12 @@
     object-fit: cover;
     object-position: center center;
 }
-/* 文字-------------- */
-.custom_selection{
-    width: 45%;
-}
-/* .selection-txt {
     
-} */
 /* 說明文字--------------- */
 .selection_txt h3{
     padding:0px 10px;
-    font-size: 22px;
-    font-weight: 700;
+    font-size: clamp(18px, calc((100vw - 390px) / 202.500 + 18px), 22px);
+    font-weight: 600;
     color: #404040;
     letter-spacing: 2px;
     display: inline-block;
@@ -100,28 +90,23 @@
     font-weight: 700;
 }
 /* 選版型圖---------------- */
-.layout_link{
+.layout_link, .metal_link, .fabric_link, .inner_link, .printing_link{
     display: flex;
+    margin-bottom: 30px;
+    cursor: pointer;
 }
-.layout_link a :active{
-    border: 5px solid #0945BA;
-}
-.layout_link a{
-    width: 33.333333%;
-    display: block;
+.layout_link li,.fabric_link li, .inner_link li, .printing_link li{
     text-align: center;
-    text-decoration: none;
-    font-size: 18px;
-    letter-spacing: 1px;
-    font-weight: 600;
-    color: #0945BA;
+}
+.fabric_link li,.inner_link li,.printing_link li{
+    width: 20%;
     padding: 10px;
-    box-sizing: border-box;
 }
-.layout_link a img{
-    vertical-align: top;
+.layout_link li img, .fabric_link li img,.inner_link li img,.printing_link li img{
     width: 100%;
+    vertical-align: top;
 }
+
 .selection_layout p{
     font-size: 15px;
     color: #404040;
@@ -130,42 +115,19 @@
     padding: 10px;
 }
 /* 選口金顏色金色與銀色--------------- */
-.metal_link{
+/* .metal_link{
     display: flex;
-}
-.metal_link .color{
+} */
+.metal_link img{
     width: 20px;
     height: 20px;
     margin: 10px;
 }
-.metal_link .color:active{
-    border:5px solid #0945BA;
-}
-.metal_link .yellow{
-    background-color: yellow;
-}
-.metal_link .gray{
-    background-color: rgb(187, 187, 187);
-}
+
 /* 選外觀布料顏色 */
-.fabric_link, .inner_link, .printing_link{
-    display: flex;
-    flex-wrap: wrap;
-}
-.fabric_link a, .inner_link a, .printing_link a{
-    width: 20%;
-    display: block;
-    text-align: center;
-    text-decoration: none;
-    font-size: 16px;
-    letter-spacing: 1px;
-    color: #404040;
-    padding: 15px;
-    box-sizing: border-box;
-}
-.fabric_link a img, .inner_link a img, .printing_link a img{
-    vertical-align: top;
-    width: 100%;
+
+.fabric_link img, .inner_link img, .printing_link a img{
+    width:16%;
     margin-bottom: 10px;
     /* object-fit: cover;
     object-position: center center; */
@@ -198,4 +160,47 @@
     color: #FFD54C;
     border: 2px dashed #FFD54C;
     box-shadow: 0 0 0 3px #0945BA;
+}
+/* 客製商品--手機版 */
+@media screen and (max-width: 767px){
+    /* 標題文字======= */
+    .custom_paper_tape{
+        margin-bottom: 50px;
+    }
+    .custom_group{
+        width: 100%;
+    }
+    /* 圖片------------ */
+    .custom_picture{
+        width: 85%;
+        margin: auto;
+    }
+    /* 文字-------------- */
+    .custom_selection{
+        width: 85%;
+        margin: auto;
+        padding-top: 50px;
+    }
+}
+/* 客製商品--平板直向 */
+@media screen and (min-width: 768px){
+    .custom_group{
+        width: 80%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+    }
+    /* 圖片------------ */
+    .custom_picture{
+        width: 45%;
+        height: 45%;
+        overflow: hidden;
+        position: sticky;
+        top: 150px;
+        border: 3px solid #FFD54C;
+        border-radius: 10px;
+    }
+    .custom_selection{
+        width: 45%;
+    }
 }
