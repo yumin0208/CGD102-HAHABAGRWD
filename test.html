@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./javascript/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+</head>
+<body>
+    <div >
+        <img  class="large" src="/image/bag8.jpg" style="width:202px;height:185px;">
+        <!-- <img  class="large" src="/image/bag9.jpg" style="width:202px;height:185px;">
+        <img  class="large" src="/image/bag10.jpg" style="width:202px;height:185px;"> -->
+    </div>
+
+    <ul class="box">
+        <li><img id="image1" class="image" src="./image/bag5.jpg" alt=""></li>
+        <li><img id="image2" class="image" src="./image/bag6.jpg" alt=""></li>
+        <li><img id="image3" class="image" src="./image/bag7.jpg" alt=""></li>
+    </ul>
+    <script>
+        // window.addEventListener("load",function(){
+        //    let imgs = document.querySelectorAll(".image");
+        //    let large = document.querySelector(".large");
+        //    for(let i = 0; i<imgs.length; i++){
+        //     // $(`imgs:nth-child(${i}) img`).src =large.src
+        //     imgs[i].onclick = function(e){
+        //     large.src = e.target.src;
+        //     }
+    
+        // }
+        //    })
+        window.addEventListener("load",function(){
+           let imgs = document.querySelectorAll(".image");
+           let large = document.querySelector(".large");
+           for(let i = 0; i<imgs.length; i++){
+            // $(`imgs:nth-child(${i}) img`).src =large.src
+            imgs[i].onclick = function(){
+                    large.src =  `./image/custom/0${i}.jpg`;
+            }
+    
+        }
+           })
+        
+
+
+
+    
+
+  
+    </script>
+
+</body>
+</html>

@@ -6,7 +6,12 @@ showSlides(slideIndex);
 // Next/previous controls
 function plusSlides(n) {
   showSlides(slideIndex += n);
+  console.log(n)
 }
+// setInterval(function(n){
+//   showSlides(slideIndex += n);
+// },2000)
+
 
 // Thumbnail image controls
 function currentSlide(n) {

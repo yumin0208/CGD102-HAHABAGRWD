@@ -8,13 +8,12 @@
     --main3-color:#ffe5fb;
     --main4-color:#FFEF00;   
 }
-/* 背景漸層 */
-/* body{
-    width: 100%;
-    background-image: linear-gradient(to bottom, #fff5fe, #E1F6FF, #FFF2FD);   
-} */
+
 /* 共用設定 */
 /* ===============導覽列共用設定================= */
+.under_line{
+    border-bottom:3px solid var(--main-color) ;
+}
 /* header-----導覽列的藍色底 */
     .menu{
         width: 100%;
@@ -26,7 +25,13 @@
     }
 /* header-----checkbox隱藏 */
     #menu_hb{
-        display: none;}
+        display: none;
+    }
+
+    .under_line:active {
+        background-color:gray;
+        color:#fafafa;
+        }
 
 /* 更多商品按鈕 */
 .more{
