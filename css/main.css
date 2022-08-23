@@ -6,13 +6,30 @@
     --main-color:#ffd54c;
     --main2-color:#0945ba;
     --main3-color:#ffe5fb;
-    --main4-color:#FFEF00;   
+    --main4-color:#FFEF00;
+    --h2-xl:28px;
+    --h2-lg:24px;   
+    --h2-md:22px;
+    --h2-mo:20px;
+    --h3-xl:24px;
+    --h3-lg:22px;   
+    --h3-md:20px;
+    --h3-mo:18px;
+    --h4-xl:18px;
+    --h4-lg:18px;   
+    --h4-md:16px;
+    --h4-mo:16px;
+    --text-xl:16px;
+    --text-lg:16px;
+    --text-md:15px;
+    --text-mo:14px;
+
 }
 
 /* 共用設定 */
 /* ===============導覽列共用設定================= */
 .menu_nav .under_line{
-    color:#ffd54c;
+    color:var(--main-color);
 }
 /* header-----導覽列的藍色底 */
     .menu{
@@ -40,12 +57,12 @@
 .more a{
     display: inline-block;
     padding: 10px 30px;
-    border-radius: 20px 20px 20px 20px;
+    border-radius: 20px;
     border: 2px dashed var(--main2-color);
     box-shadow: 0 0 0 3px var(--main4-color);
     background-color: var(--main4-color);
     color: var(--main2-color);
-    font-size: clamp(16px, calc((100vw - 414px) / 393.000 + 16px), 18px);
+    font-size: 16px;
 }  
 /* ===============頁尾共用設定================= */
 footer{
@@ -232,26 +249,19 @@ footer{
 /* ===============頁尾================= */
 /* 頁尾--手機版 */
 @media screen and (max-width: 767px){
-    .footer_picture{
+    .footer_content{
         display: flex;
+        justify-content: center;
         width: 100%;        
     }
     .footer_picture .logo img{
         width: 33%;
     }
     .community h5 {
-        font-size: 14px;
-        color: #ffffff;
-        font-weight: 600; 
-        text-align: center;
-        margin-bottom: 5px;
+        display: none;
     }
     .community_icon {
-        text-align: center;
-    } 
-    .community_icon img{
-        vertical-align: top;
-        width: 20%;
+        display: none;
     } 
     .footer_text ul {
         display: none;
@@ -262,7 +272,7 @@ footer{
     .footer_txt li a{
         display: inline-block;
         color: #fff;
-        font-size: 13px;
+        font-size: 10px;
         padding: 5px;
         letter-spacing: 3px;
         line-height: 20px;

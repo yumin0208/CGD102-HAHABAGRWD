@@ -48,24 +48,24 @@
     background-color:rgb(255,229,251,.5);
 }
 /* banner下方的點點按鈕 */  
-/* .banner_slider_dot{
+.banner_slider_circle{
     text-align: center;
     position: relative;
     z-index: 1;
 } 
-.banner_slider_dot .dot{
+.banner_slider_circle .circle{
     display: inline-block;
     cursor: pointer;
-    margin: 0 10px;
+    margin: 10px;
     width: 10px;
     height: 10px;
     border-radius: 50%;
     background-color: #bebebe;
     transition: background-color 0.6s ease;
-}
-.active,.banner_slider_dot span:hover{
+} 
+/* .active,.banner_slider_circle span:hover{
     background-color: #2a2a2a;
-} */
+}  */
 
 /* 圖片淡入 */
 .fade {
@@ -91,21 +91,16 @@
         padding-bottom: 100px;
     } 
 }
-/* 平板橫向以上 */
-@media screen and (min-width: 1024px){
-    .wrap_banner{
-        padding-bottom: 150px;
-    } 
-}
-
 /* ==================最新商品====================*/
 /* 輪播套件 */
 .owl-nav{
     display: none;
 }
+.owl-dot{
+    margin: 20px 0;
+}
 .wrap_new_product{
     width: 100%;
-
 } 
 /* 最新商品標題 */
 .new_paper_tape{
@@ -117,13 +112,11 @@
     text-align: center;
     position: relative;
     top: -25px;
-    font-size: clamp(18px, calc((100vw - 414px) / 102.600 + 18px), 28px);
     font-weight: 600;
     line-height: 50px;
 }
 /* 最新商品小標題文字 */
 .new_paper_tape +p{
-    font-size: clamp(15px, calc((100vw - 414px) / 157.200 + 15px), 20px);
     text-align: center;
     color: #fff;
 }
@@ -166,17 +159,14 @@
     background-size: cover;
     text-align: center;
     color: var(--main2-color);
-    font-size: clamp(16px, calc((100vw - 390px) / 135.000 + 16px), 22px);
     font-weight: 700;
     margin-bottom: 10px;
 }
 .new_product_items_text >p{
-    font-size: clamp(14px, calc((100vw - 414px) / 393.000 + 14px), 16px);
     color: var(--text-color);
 }
 .new_product_items_text .price{
     text-align: right;
-    
     font-size: clamp(18px, calc((100vw - 414px) / 196.500 + 18px), 22px);
     font-weight: 700;
 }
@@ -196,11 +186,13 @@
     }   
     /* 最新商品標題 */
     .new_paper_tape{
+        font-size: var(--h2-mo);
         letter-spacing: 3px;
         background-size: 40%;
     }
     /* 最新商品小標題文字 */
     .new_paper_tape +p{
+        font-size: var(--text-mo);
         line-height: 32px;
         letter-spacing: 1px;
     }
@@ -214,13 +206,17 @@
     } 
     /* 卡片文字 */
     .new_product_items_text >h3{
+        font-size: var(--h3-mo);
         line-height: 32px;
         letter-spacing: 2px;
     }
     .new_product_items_text >p{
+        font-size: var(--text-mo);
         line-height: 30px;
     }
-
+    .new_product_items_text .price{
+        font-size: var(--h3-mo); 
+    }
 }
 /* 最新商品--平板直向 */
 @media screen and (min-width: 768px){
@@ -235,11 +231,13 @@
     }   
     /* 最新商品標題 */
     .new_paper_tape{
+        font-size: var(--h2-md);
         letter-spacing: 3px;
         background-size: 30%;
     }
     /* 最新商品小標題文字 */
     .new_paper_tape +p{
+        font-size: var(--text-md);
         line-height: 32px;
         letter-spacing: 1px;
     }
@@ -249,22 +247,29 @@
     } 
     /* 卡片文字 */
     .new_product_items_text >h3{
+        font-size: var(--h3-md);
         line-height: 32px;
         letter-spacing: 2px;
     }
     .new_product_items_text >p{
+        font-size: var(--text-md);
         line-height: 30px;
+    }
+    .new_product_items_text .price{
+        font-size: var(--h3-md); 
     }
 }
 /* 最新商品---平板橫向以上 */
 @media screen and (min-width: 1024px){
     /* 最新商品標題 */
     .new_paper_tape{
+        font-size: var(--h2-lg);
         letter-spacing: 3px;
         background-size: 25%;
     }
     /* 最新商品小標題文字 */
     .new_paper_tape +p{
+        font-size: var(--text-lg);
         line-height: 32px;
         letter-spacing: 1px;
         margin-bottom: 20px;
@@ -275,12 +280,17 @@
     } 
     /* 卡片文字 */
         .new_product_items_text >h3{
+            font-size: var(--h3-lg);
             line-height: 32px;
             letter-spacing: 3px;
         }
         .new_product_items_text >p{
+            font-size: var(--text-lg);
             line-height: 30px;
             letter-spacing: 2px;
+        }
+        .new_product_items_text .price{
+            font-size: var(--h3-lg); 
         }
 }
 /* 最新商品---1200以上 */
@@ -318,14 +328,20 @@
     }
      /* 最新商品標題 */
      .new_paper_tape{
+        font-size: var(--h2-xl);
+        top: 3px;
         letter-spacing: 5px;
         background-size: 20%;
     }
     /* 最新商品小標題文字 */
     .new_paper_tape +p{
+        font-size: var(--text-xl);
         line-height: 40px;
         letter-spacing: 1px;
     } 
+    .new_product_items_text .price{
+        font-size: var(--h3-xl); 
+    }
     /* 圖片縮放效果 */
     .new_product_items_picture img:hover{
         transform: scale(1.2);
@@ -337,6 +353,7 @@
         } 
     /* 卡片文字 */
     .new_product_items_text >h3{
+        font-size: var(--h3-xl);
         line-height: 36px;
         letter-spacing: 3px;
     }
@@ -350,7 +367,13 @@
         box-shadow: 0 0 0 4px #fff;
     }
 }
-
+/* 最新商品1440 */
+@media screen and (min-width: 1440px){
+     /* 最新商品標題 */
+     .new_paper_tape{
+        top: -25px;
+    }
+}
 /* ===============商品介紹====================    */
 .wrap_product_introduction{
     width: 100%;
@@ -372,9 +395,7 @@
 .product_introduction_title{
     color: #fff;
     height: 50px;
-    font-size: clamp(18px, calc((100vw - 414px) / 102.600 + 18px), 28px);
     font-weight: 800;
-    /* line-height: 50px; */
     text-align: center;
     position: relative;
 }
@@ -392,9 +413,6 @@
 }
 /* 商品介紹小標題文字 */
 .product_title >p{
-    font-size: clamp(15px, calc((100vw - 414px) / 157.200 + 15px), 20px);
-    text-align: justify;
-    text-indent: 2em;
     line-height: 32px;
     color: #fff;
 }
@@ -516,60 +534,44 @@
 }
 /* 商品介紹卡片文字小標題h4 */
 .product_text_coin h4,.product_text_wallet h4, .product_text_bag h4{
-    font-size: clamp(16px, calc((100vw - 375px) / 177.500 + 16px), 22px);
     color: #0D487D;
     font-weight: 600;
     padding: 10px 10px;
 }
+
 /* 商品介紹卡片文字內文 */
 .product_text_coin p,.product_text_wallet p, .product_text_bag p {
-    font-size: clamp(14px, calc((100vw - 375px) / 532.500 + 14px), 16px);
     color: #404040;
     padding: 5px 10px;
 }
+
 /* 商品介紹卡片文字價錢 */
-.product_text_wallet .price, 
-.product_text_bag .price
-{
-    font-size: clamp(18px, calc((100vw - 375px) / 177.500 + 18px), 24px);
+.product_text_coin .price,.product_text_wallet .price,.product_text_bag .price{
     text-align: right;
-    font-weight: 800;
-    padding: 10px;
+    padding: 20px 0;
 }
-.product_text_coin .price{
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
+.product_text_coin .price .shopping_cart,.product_text_wallet .price .shopping_cart,.product_text_bag .price .shopping_cart{
+    background-color:var(--main2-color);
+    color: #fff;
 }
-.product_text_coin .price>p{
-    font-size: clamp(18px, calc((100vw - 375px) / 177.500 + 18px), 24px);
-    font-weight: 800;
-    padding: 10px;
-}
-.product_text_coin .price img,.product_text_wallet .price img,.product_text_bag .price img{
-    width: clamp(15px, calc((100vw - 375px) / 213.000 + 15px), 20px);
-    vertical-align: top;
-}
-.product_text_coin .price a{
+
+.product_text_coin .price a,.product_text_wallet .price a,.product_text_bag .price a{
     color: #1FB085;
-}
-.product_text_wallet .price a{
-    color: #A344AB;
-}
-.product_text_bag .price a{
-    color: #AA7C52;
+    font-weight: 700;
 }
 
 /* 商品介紹--手機版 */
 @media screen and (max-width: 767px){
     /* 商品介紹標題 */
     .product_introduction_title{
+        font-size: var(--h2-mo);
         letter-spacing: 2px;
         line-height: 42px;
         text-shadow: 1px 1px 1px gray;
     }
     /* 商品介紹小標題文字 */
     .product_title >p{
+        font-size: var(--text-mo);
         line-height: 32px;
         padding: 30px;
     }
@@ -632,11 +634,28 @@
         right: -9px;
         width: 10px;
     }
+    .product_text_coin h4,.product_text_wallet h4, .product_text_bag h4{
+        font-size: var(--h4-mo);
+    }
+    .product_text_coin p,.product_text_wallet p, .product_text_bag p {
+        font-size: var(--text-mo);
+    }
+    .product_text_coin .price .shopping_cart,.product_text_wallet .price .shopping_cart,.product_text_bag .price .shopping_cart{
+        padding: 5px 5px;
+        font-size: 14px;
+    }
+    .product_text_coin .price a,.product_text_wallet .price a,.product_text_bag .price a{
+        font-size: 14px;
+        padding-right:2px;
+    }
+    
+
 }
 /* 商品介紹--平板直向 */
 @media screen and (min-width: 768px){
 /* 商品介紹標題 */    
     .product_introduction_title{
+        font-size: var(--h2-md);
         background-image: url(../image/bg9.svg);
         background-repeat: no-repeat;
         background-position: center;
@@ -647,6 +666,7 @@
     }
     /* 商品介紹小標題文字 */
     .product_title >p{
+        font-size: var(--text-md);
         line-height: 32px;
         padding:30px 50px;
     }
@@ -699,11 +719,27 @@
         right: -9px;
         width: 10px;
     }
+    .product_text_coin h4,.product_text_wallet h4, .product_text_bag h4{
+        font-size: var(--h4-md);
+    }
+    .product_text_coin p,.product_text_wallet p, .product_text_bag p {
+        font-size: var(--text-md);
+    }
+    .product_text_coin .price .shopping_cart,.product_text_wallet .price .shopping_cart,.product_text_bag .price .shopping_cart{
+        padding: 5px 5px;
+        font-size: 16px;
+    }
+    .product_text_coin .price a,.product_text_wallet .price a,.product_text_bag .price a{
+        font-size: 16px;
+        padding-right:5px;
+    }
 }
+
 /* 商品介紹---平板橫向以上 */
 @media screen and (min-width: 1024px){
 /* 商品介紹標題 */    
     .product_introduction_title{
+        font-size: var(--h2-lg);
         top: 30px;
     }
     .product_items_coin, .product_items_wallet, .product_items_bag{
@@ -712,15 +748,32 @@
     }
 /* 商品介紹小標題文字 */
     .product_title >p{
+        font-size: var(--text-lg);
         line-height: 36px;
         padding:30px 60px;
     }
+    .product_text_coin h4,.product_text_wallet h4, .product_text_bag h4{
+        font-size: var(--h4-lg);
+    }
+    .product_text_coin p,.product_text_wallet p, .product_text_bag p {
+        font-size: var(--text-lg);
+    }
+    .product_text_coin .price .shopping_cart,.product_text_wallet .price .shopping_cart,.product_text_bag .price .shopping_cart{
+        padding: 10px 20px;
+        font-size: 18px;
+    }
+    .product_text_coin .price a,.product_text_wallet .price a,.product_text_bag .price a{
+        font-size: 18px;
+        padding-right:5px;
+    }
+
 }
 /* 商品介紹---1200以上 */
 @media screen and (min-width: 1200px){
 /* 商品介紹標題 */    
     .product_introduction_title{
-        top: 40px;
+        font-size: var(--h2-xl);
+        top: 35px;
     }
     .product_items_coin, .product_items_wallet, .product_items_bag{
         margin: 20px;
@@ -728,9 +781,14 @@
     }
 /* 商品介紹小標題文字 */
     .product_title >p{
+        font-size: var(--text-xl);
         line-height: 36px;
         padding:30px 100px;
     }
+    .product_text_coin p,.product_text_wallet p, .product_text_bag p {
+        font-size: var(--text-xl);
+    }
+
     /* 背景圈圈 */
     .product_introduction_group::after{
         content: '';
@@ -753,6 +811,17 @@
         height:50%;
         bottom: -720px;
         left: -50px;
+    }
+    .product_text_coin h4,.product_text_wallet h4, .product_text_bag h4{
+        font-size: var(--h4-xl);
+    }
+    .product_text_coin .price .shopping_cart,.product_text_wallet .price .shopping_cart,.product_text_bag .price .shopping_cart{
+        padding: 10px 20px;
+        font-size: 18px;
+    }
+    .product_text_coin .price a,.product_text_wallet .price a,.product_text_bag .price a{
+        font-size: 18px;
+        padding-right:10px;
     }
     /* 圖片縮放效果 */
     .product_picture img:hover{
@@ -945,7 +1014,6 @@
     background-repeat: no-repeat;
     background-position: center;
     margin:auto;
-    font-size: clamp(18px, calc((100vw - 414px) / 102.600 + 18px), 28px);
     font-weight: 600;
     line-height: 50px;
     text-align: center;
@@ -961,7 +1029,6 @@
 .custom_made_text h3 {
     margin-bottom: 10px;
     display: inline-block;
-    font-size: clamp(16px, calc((100vw - 390px) / 131.250 + 16px), 24px);
     font-weight: 700;
     color: #404040;
     letter-spacing: 2px;
@@ -969,7 +1036,6 @@
 }
 /* 卡片容器 */
 .custom_made_text p {
-    font-size: clamp(14px, calc((100vw - 390px) / 262.500 + 14px), 18px);
     color: #5a5a5a;
     text-align: justify;
     text-indent: 2em;
@@ -1003,6 +1069,10 @@
     .custom_paper_tape{
         letter-spacing: 3px;
         background-size: 45%;
+        font-size: var(--h2-mo);
+    }
+    .custom_made_text h3 {
+        font-size: var(--h3-mo);
     }
     /* 文字區塊 */
     .custom_made_text{
@@ -1013,6 +1083,9 @@
         border-bottom:3px solid rgba(160, 0, 165, 0.3);
         padding: 10px;
         margin-bottom: 20px;
+    }
+    .custom_made_text p {
+        font-size: var(--text-mo);
     }
     .more{
         margin: 20px 0;
@@ -1033,11 +1106,6 @@
     }
 }
 @media screen and (min-width: 768px){
-    /* 客製商品標題 */
-    .custom_paper_tape{
-        letter-spacing: 3px;
-        background-size: 32%;
-    }
     /* 背景設定 */
     .custom_made_bag{
         width: 100%;
@@ -1049,8 +1117,12 @@
     }   
     /* 客製商品標題 */
     .custom_paper_tape{
+        font-size: var(--h2-md);
         letter-spacing: 3px;
         background-size: 30%;
+    }
+    .custom_made_text h3 {
+        font-size: var(--h3-md);
     }
     /* 文字區塊 */
     .custom_made_text{
@@ -1060,6 +1132,7 @@
     /* 客製商品文字 */
     .custom_made_text p{
         line-height: 28px;
+        font-size: var(--text-md);
     }
     /* 圖片容器 */
     .custom_made_picture{
@@ -1106,12 +1179,6 @@
         bottom: 0px;
         left: -36px;
     }
-    /* 客製商品標題 */
-    .custom_paper_tape{
-        letter-spacing: 3px;
-        background-size: 25%;
-        margin-bottom: 20px;
-    }
     /* 卡片群組 */
     .custom_items {
         width: 95%;
@@ -1122,12 +1189,21 @@
         width: 40%;
         padding: 10px;
     }
-    .custom_made_text h3{
+    /* 客製商品標題 */
+    .custom_paper_tape{
+        font-size: var(--h2-lg);
+        letter-spacing: 3px;
+        background-size: 25%;
+        margin-bottom: 20px;
+    }
+    .custom_made_text h3 {
+        font-size: var(--h3-lg);
         margin-bottom: 30px;
     }
     /* 客製商品文字 */
     .custom_made_text p{
         line-height: 28px;
+        font-size: var(--text-lg);
     }
     /* 圖片容器 */
     .custom_made_picture{
@@ -1156,6 +1232,14 @@
         content: '';
         visibility: hidden;
     }
+    /* 客製商品標題 */
+    .custom_paper_tape{
+        font-size: var(--h2-xl);
+    }
+    .custom_made_text h3 {
+        font-size: var(--h3-xl);
+        margin-bottom: 30px;
+    }
     /* 文字區塊 */
     .custom_made_text{
         width: 45%;
@@ -1164,6 +1248,7 @@
     /* 客製商品文字 */
     .custom_made_text p{
         line-height: 36px;
+        font-size: var(--text-xl);
     }
     /* 圖片容器 */
     .custom_made_picture{
@@ -1243,7 +1328,6 @@
 
 } 
 .brand_title h2, .shop_title h2{
-    font-size: clamp(18px, calc((100vw - 414px) / 102.600 + 18px), 28px);
     color: var(--main2-color);
     font-weight: 800; 
     margin-bottom: 20px;
@@ -1257,12 +1341,16 @@
     .brand_group .brand,.brand_group .shop{
         margin-bottom: 80px;
     }
+    .brand_title h2, .shop_title h2{
+        font-size:var(--h2-mo);}
 }
 /* 平板直向 */
 @media screen and (min-width: 768px){
     .wrap_brand{
         padding: 150px 0;
     }
+    .brand_title h2, .shop_title h2{
+        font-size:var(--h2-md);}
     /* 卡片大小 */
 .brand_group .brand,.brand_group .shop{
     width: 40%;
@@ -1274,6 +1362,8 @@
     .wrap_brand{
         padding-top: 250px;
     }
+    .brand_title h2, .shop_title h2{
+        font-size:var(--h2-lg);}
     /* 卡片大小 */
 .brand_group .brand,.brand_group .shop{
     width: 40%;
@@ -1285,6 +1375,8 @@
     .wrap_brand{
         padding-top: 300px;
     }
+    .brand_title h2, .shop_title h2{
+        font-size:var(--h2-xl);}
     /* 卡片大小 */
     .brand_group .brand,.brand_group .shop{
         width: 40%;

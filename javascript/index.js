@@ -1,6 +1,6 @@
 let slideIndex = 1;
 let slides = document.getElementsByClassName("banner_picture_items small");//先抓手機板slides
-let dots = document.querySelectorAll(".banner_slider.small .dot");//同樣的元素選起來，以陣列的方式被傳回
+let dots = document.querySelectorAll(".banner_slider.small .circle");//同樣的元素選起來，以陣列的方式被傳回
 showSlides(slideIndex);
 
 // Next/previous controls
@@ -8,9 +8,6 @@ function plusSlides(n) {
   showSlides(slideIndex += n);
   console.log(n)
 }
-// setInterval(function(n){
-//   showSlides(slideIndex += n);
-// },2000)
 
 
 // Thumbnail image controls
@@ -41,13 +38,13 @@ function onResize() {
     if (windowWidth > 1024) {//斷點設在平板橫向
         document.getElementById('large_carousel').classList.remove('disable');
         document.getElementById('small_carousel').classList.add('disable');
-        dots = document.querySelectorAll(".banner_slider.large .dot");
+        dots = document.querySelectorAll(".banner_slider.large .circle");
         slides = document.getElementsByClassName("banner_picture_items large");
 
     } else {
         document.getElementById('large_carousel').classList.add('disable');
         document.getElementById('small_carousel').classList.remove('disable');
-        dots = document.querySelectorAll(".banner_slider.small .dot");
+        dots = document.querySelectorAll(".banner_slider.small .circle");
         slides = document.getElementsByClassName("banner_picture_items small");
     }
 
